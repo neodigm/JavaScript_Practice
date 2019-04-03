@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up form</title>
+    <style>
+    /* --------------------
+     Add your styling here
+     -------------------- */
+        .signup__form {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .signup__form input {
+            display: block;
+            border-radius: 6px;
+            border: solid 1px #ccc;
+            font-size: 18px;
+            height: 32px;
+            margin: 8px auto;
+            padding: 8px;
+        }
+        .signup__form .input__subm {
+            display: block;
+            background-color: #993300;
+            border-radius: 6px;
+            color: #fff;
+            cursor: pointer;
+            padding: 8px; margin: 8px auto;
+            text-align: center;
+            max-width: 256px;
+        }
+        .signup__form .input__subm:hover {
+            background-color: #e26120;
+        }
+    </style>
+</head>
+<body>
+<form id="js-form" class="signup__form">
+    <!----------------------
+    Add your markup here
+    ------------------------>
+<input id="js-fname" class="input__field" type="text" placeholder="First Name">
+<input id="js-lname" class="input__field" type="text" placeholder="Lasst Name">
+<input id="js-email" class="input__field" type="text" placeholder="Email Addr">
+<input id="js-pw"    class="input__field" type="password" placeholder="Password">
+<input id="js-pw1"   class="input__field" type="password" placeholder="Retype Password">
+<a id="js-subm" class="input__subm">Join Now!</a>
+
+</form>
+<script>
+    /* --------------------
+     Add your code here
+    --------------------- */
+let DoValid = (function( _d, qForm ){
+  const eForm = _d.querySelectorAll( qForm )[0];
+  const aInputs = [].slice.call( _d.querySelectorAll( qForm + " INPUT" ) );
+  let isValid = false;
+  let checkValues;
+  _d.querySelectorAll("#js-subm")[0].addEventListener("click", function( e ){
+    isValid = checkValues();
+    //if( isValid ){ // Check email contains AT
+      //isValid = ( _d.querySelectorAll("#js-email")[0].value.indexOf("@") === -1 );
+    //}
+    if( isValid ){  //  Check email contains AT
+      isValid = ( _d.querySelectorAll("#js-pw")[0].value === _d.querySelectorAll("#js-pw1")[0].value  );
+    }
+    alert( (isValid) ? "OK TO SUBMIT" : "FORM IS NOT VALID" );
+  });
+  checkValues = function(){
+      return  (aInputs.filter(function( e ){ return ( e.value ) }).length === 5 );
+  };
+  
+})( document, "#js-form");  
+
+</script>
+</body>
+</html>

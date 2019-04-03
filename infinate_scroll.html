@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Infinite Scroll ⚡️ Scott C. Krause</title>
+    <style>
+    /* --------------------
+     Add your styling here
+     -------------------- */
+     .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(374px,1fr));
+        grid-gap: 16px;
+     }
+     footer {
+         background-color: #ccc;
+         margin: 6px 2px;
+         padding: 6px 2px;
+     }
+     footer > p {
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 16px;
+         text-align: center;
+     }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!----------------------
+    Add your markup here
+    ------------------------>
+
+</div>
+<footer><p>Loading ...</p></footer>
+<script>
+    /* --------------------
+     Add your code here
+    --------------------- */
+    "use strict";
+    const DoInfinate = (function( _d, _qCont ){  //  Generate new image elements when the footer enters the viewport.
+        const eContr = _d.querySelectorAll( _qCont )[0];
+        const eFootr = _d.querySelectorAll("footer")[0];
+        var io = new IntersectionObserver(function() {
+            DoInfinate.fetchNext();
+        }, { root: null });
+        io.observe( eFootr );
+        return {
+            "init": function(){   // 
+                DoInfinate.fetchNext();                  
+            },
+            "fetchNext": function(){ // Insert 6 new img elements with random src attrbs
+                for(var i = 0; i <= 6; i++){
+                    var eImg = _d.createElement("img");
+                    eImg.src = "http://api.adorable.io/avatars/3" + Math.floor(Math.random() * (99999999 - 1000 + 1)) + 1000;
+                    eContr.appendChild( eImg );                   
+                }
+            }
+        }
+    })( document, ".container" );
+    DoInfinate.init();
+</script>
+</body>
+</html>
