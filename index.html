@@ -6,14 +6,55 @@
         <style type="text/css">
             * {font-family: sans-serif;}
             h1 {font-size: 18px;text-align: center;color: #333333;}
+
+            /* desktop */
+a.skip-main {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}
+a.skip-main:focus, a.skip-main:active {
+    color: #fff;
+    background-color:#000;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 35%;
+    padding:5px;
+    border-radius: 15px;
+    border:4px solid yellow;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
+}
+.card__grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax( 256px, 1fr ));
+    justify-items: center;
+}
+.card__grid a {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 6px;
+    text-align: center;
+    min-width: 176px;
+}
         </style>
     </head>
     <body>
+
+        <a class="skip-main" href="#main">Skip to main content</a>
         <header role="banner">
             <h1>JavaScript and TypeScript Practice</h1>
         </header>
-        <main role="main">
-            <nav role="navigation">
+        <main id="main" role="main">
+            <nav class="card__grid" role="navigation">
 <a href="infinate_scroll.html">Infinate Scroll</a>
 <a href="form_validation.html">Form Validation</a>
 <a href="flip_counter.html">Flip Counter</a>

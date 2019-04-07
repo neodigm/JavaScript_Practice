@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=2, minimum-scale=1, width=device-width, height=device-height" />
+  <title>Title</title>
+  <style type="text/css">
+    @media only screen and (min-width:48.1em) and (max-width:62em) { /* med - tablet */ }
+    @media only screen and (max-width:48em) { /* small - mobile */ }
+    @media print { /* styles go here */ }
+    @supports (display: grid) { 
+      .main__grd {
+        display: grid;
+        /*grid-template-columns: repeat(auto-fill, minmax( 176px, 1fr));*/
+        grid-template-columns: 25% 1fr 25%; grid-template-rows: 68px auto 68px;
+        justify-items: center;
+        min-height: calc(100vh - 224px);
+        }
+     }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <h1>Header</h1>
+  </header>
+  <main role="main">
+    <nav role="navigation">
+
+    </nav>
+    <article>
+      Article
+    </article>
+    <aside role="complementary">
+      Aside
+    </aside>
+  </main>
+  <footer role="contentinfo">
+    <h6>Footer</h6>
+  </footer>
+<script>
+  "used strict";
+  var fVal = (( dc, query )=>{
+    return {
+      "init" : function(){}
+    }
+
+  })( document, "main form" );
+</script>
+</body>
+</html>

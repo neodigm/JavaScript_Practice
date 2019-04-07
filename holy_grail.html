@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Holy Grail</title>
+    <style>
+    /* --------------------
+     Add your styling here
+     -------------------- */
+      header {
+        text-align: center;
+        width: 100%;
+        min-height: 100px;
+        border: 1px solid #ccc;
+      }
+main {
+  display: grid;
+  /*grid-template-columns: repeat(auto-fill, minmax( 176px, 1fr));*/
+  grid-template-columns: 25% 1fr 25%;
+  grid-template-rows: 68px auto 68px;
+  justify-items: center;
+  border: 1px solid #ccc;
+  min-height: calc(100vh - 224px);
+}
+      footer {
+        text-align: center;
+        width: 100%;
+        min-height: 100px;
+        border: 1px solid #ccc;
+      }
+@media screen and (max-width: 600px){
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+    </style>
+</head>
+<body class="hg">
+    <!----------------------
+    Add your markup here
+    ------------------------>
+  <header role="banner">
+    <h1>Header</h1>
+  </header>
+  <main role="main">
+    <nav role="navigation">
+      <h2>Menu</h2>
+    </nav>
+    <article>
+      <h3>Content</h3>
+    </article>
+    <aside>
+      <h4>Side</h4>
+    </aside>
+  </main>
+  <footer role="complementary">
+    <h5>Footer</h5>
+  </footer>
+
+<script>
+    /* --------------------
+     Add your code here
+    --------------------- */
+</script>
+<!--
+neo5ive@gmail.com
+ahmedemam755@gmail.com
+ahmedemam755@icloud.com
+-->
+
+</body>
+</html>
