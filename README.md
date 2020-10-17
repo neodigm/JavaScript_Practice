@@ -1,4 +1,5 @@
-# JavaScript_Practice
+[![License: BSD](https://badgen.net/badge/license/BSD/orange)](https://opensource.org/licenses/BSD-3-Clause)
+---
 Musings in the expressive language that is JavaScript
 
 🗿Update Flux Capacitor (WebAssembly 🐹 GoLang)🪐
