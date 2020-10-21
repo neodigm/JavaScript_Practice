@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+<!--
+ ____   ___  __  ____  ____     ___       __ _  ____   __   _  _  ____  ____
+/ ___) / __)/  \(_  _)(_  _)   / __)     (  / )(  _ \ / _\ / )( \/ ___)(  __)
+\___ \( (__(  O ) )(    )(    ( (__  _    )  (  )   //    \) \/ (\___ \ ) _)
+(____/ \___)\__/ (__)  (__)    \___)(_)  (__\_)(__\_)\_/\_/\____/(____/(____)
+                http://portfolio.NeoStudios.com/        cv@NeoStudios.com
+Disclaimer
+==========
+	1).  I created a single file / pure ECMAScript solution so it would be easy to review.  I would typically consider an auto-executing anonymous encapsulated function.
+
+	2).  This logic has been written as an exercise without concern for performance.  Before use in a production environment it should be refactored for performance (minified, garbage collection, memory leaks, jshint, ...).
+
+	3).  Tested in Chrome and FireFox only.
+
+	4).  Code snippet is available online here: http://jsfiddle.net/neodigm/4xrunqex/
+
+	5).  GitHub fork available upon request
+-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="Description" content="JS Challenge" />
+		<meta name="Keywords" content="Object Orientated JavaScript">
+		<title>JS Challenge</title>
+	</head>
+<body>
+	<style TYPE="text/css">
+	.cell_container{
+		float: right; margin: 24px; width: 600px; background-color: #FAFAFA;
+	}
+	</style>
+
+		<h2>Challenge 1</h2>
+<h5>
+1) Create a JavaScript Class called “Cell” which creates an HTML box of a specified height( px ), width( px ) and color.  The box should have a method called “render” that will force the box to be drawn on the screen, or updated if already rendered.
+</h5>
+		<hr>
+		<div id="c1_container"  class="cell_container" class="cell_container"></div>
+		<br><br>
+		<button id="instance_cell"
+		onClick="JavaScript:Cell.setTarget('c1_container');eval(document.getElementById('instance_cell_syntax').value);">Instance / Render Cell(s)</button>
+		<br>
+		<textarea id="instance_cell_syntax" rows="6" cols="64">
+var oCellDef = {color:'EDBA08', height:32, width:48};
+c1 = new Cell(oCellDef);c1.render();
+var oCellDef = {color:'78AA09', height:48, width:96};
+c2 = new Cell(oCellDef);c2.render();
+var oCellDef = {color:'280AF0', height:96, width:112};
+c3 = new Cell(oCellDef);c3.render();
+</textarea>
+		<br>
+
+		<button id="update_cell"
+		onClick="JavaScript:Cell.setTarget('c1_container');eval(document.getElementById('update_cell_syntax').value);">Update Cell(s)</button>
+		<br>
+<textarea id="update_cell_syntax" rows="6" cols="64">
+c1.setColor("6693BC");c2.setColor("900034");c3.setColor("56AB66");
+c1.setHeight(176);c1.setHeight(48);
+c2.setWidth(112);c2.setWidth(84);
+</textarea>
+		<br>
+
+		<button id="render_cell"
+		onClick="JavaScript:Cell.setTarget('c1_container');eval(document.getElementById('render_cell_syntax').value);">Render Cell(s)</button>
+		<br>
+<textarea id="render_cell_syntax" rows="6" cols="64">
+c1.render();
+c2.render();
+c3.render();
+</textarea>
+		<br>
+
+		<button id="destroy_cell"
+		onClick="JavaScript:Cell.setTarget('c1_container');eval(document.getElementById('destroy_cell_syntax').value);">Destroy Cell(s)</button>
+		<br>
+<textarea id="destroy_cell_syntax" rows="6" cols="64">
+Cell.refreshDOM();
+c1 = null;
+c2 = null;
+c3 = null;
+</textarea>
+		<br>
+
+		<h2>Challenge 2</h2>
+<h5>
+2) Create a JavaScript Class called “Grid” which will create a grid of a specified number of rows, columns, spacing between each grid cell. The grid should have sane defaults for each of the parameters if not specified.  The Grid should render a new “Cell” in each intersection of a row and column.
+	a. The Grid Class should have a “randomize” method that when called randomizes the color of the Cells contained inside
+	b. The Grid should have a “resize” method that will grow or shrink the size of the grid as well as the number of cells contained inside based on the parameters specified
+</h5>
+		<hr>
+		<div id="c2_container"  class="cell_container"></div>
+		<br><br>
+		<button id="instance_grid"
+		onClick="JavaScript:Cell.setTarget('c2_container');eval(document.getElementById('instance_grid_syntax').value);">Instance Grid</button>
+
+		<br>
+<textarea id="instance_grid_syntax" rows="6" cols="64">
+var oGridDef = {rows:6, cols:6, spacing:8};
+grid = new Grid(oGridDef);
+</textarea>
+		<br>
+
+		<button id="resize_grid"
+		onClick="JavaScript:Cell.setTarget('c2_container');eval(document.getElementById('resize_grid_syntax').value);">Resize</button>
+		<br>
+		<textarea id="resize_grid_syntax" rows="6" cols="64">
+var oCellDef = {color:'EDBA08', height:32, width:32};
+var oGridDef = {rows:6, cols:8, spacing:6};
+grid.resize(oCellDef, oGridDef);
+</textarea>
+		<br>
+
+		<button id="randomize_grid"
+		onClick="JavaScript:Cell.setTarget('c3_container');eval(document.getElementById('randomize_grid_syntax').value);">Randomize</button>
+		<br>
+<textarea id="randomize_grid_syntax" rows="6" cols="64">
+grid.randomize();
+</textarea>
+		<br>
+
+		<button id="remove_grid"
+		onClick="JavaScript:Cell.setTarget('c3_container');eval(document.getElementById('remove_grid_syntax').value);">remove</button>
+		<br>
+<textarea id="remove_grid_syntax" rows="6" cols="64">
+Cell.refreshDOM();
+grid = null;
+</textarea>
+		<br>
+
+		<h2>Challenge 3</h2>
+<h5>
+	3) Create Class called “ResizableGrid” which extends “Grid”. The resizable grid should all users to grab the lower right hand corner of the grid and resize it to their liking. The grid should add / remove cells as needed to fill the allowable area. When being resized, the grid should give some visual indication as to how big the grid will be if the user were to stop.
+</h5>
+		<hr>
+		<div id="c3_container"  class="cell_container"></div>
+		<br><br>
+		<button id="instance_resizablegrid"
+		onClick="JavaScript:Cell.setTarget('c3_container');eval(document.getElementById('instance_resizablegrid_syntax').value);">Instance ResizableGrid</button>
+
+		<br>
+<textarea id="instance_resizablegrid_syntax" rows="6" cols="64">
+var oGridDef = {rows:6, cols:6, spacing:8};
+resizablegrid = new ResizableGrid(oGridDef);
+var oCellDef = {color:'EDBA08', height:16, width:16};
+resizablegrid.resize(oCellDef, oGridDef);
+</textarea>
+		<br>
+
+		<button id="allowresize_resizablegrid"
+		onClick="JavaScript:Cell.setTarget('c3_container');eval(document.getElementById('allowresize_resizablegrid_syntax').value);">Allow Resize</button>
+		<br>
+<textarea id="allowresize_resizablegrid_syntax" rows="6" cols="64">
+resizablegrid.allowresize();
+</textarea>
+		<br>
+
+		<button id="remove_resizablegrid"
+		onClick="JavaScript:Cell.setTarget('c3_container');eval(document.getElementById('remove_resizablegrid_syntax').value);">remove</button>
+		<br>
+<textarea id="remove_resizablegrid_syntax" rows="6" cols="64">
+Cell.refreshDOM();
+resizablegrid = null;
+</textarea>
+		<br>
+
+<script>
+	function Grid (oGridDef) {
+		//  Grid - Layout a Cell grid
+		//  given rows, columns and spaces (px)
+
+		// Public Methods
+		this.setRows = function (nRows) {
+			this._rows = (typeof nRows === "undefined") ? 6 : nRows;
+		};
+		this.setCols = function (nCols) {
+			this._cols = (typeof nCols === "undefined") ? 6 : nCols;
+		};
+		this.setSpaces = function (nSpacing) {
+			this._spacing = (typeof nSpacing === "undefined") ? 16 : nSpacing;
+		};
+		//  Assign Parameters to Properties
+		this.setRows(oGridDef.rows);
+		this.setCols(oGridDef.cols);
+		this.setSpaces(oGridDef.spacing); // px
+	}
+
+	Grid.prototype.resize = function(oCellDef, oGridDef) {
+		//    Re-draw the Grid given new Cell and Grid properties.
+
+		//  Assign Parameters to Properties
+		this.setRows(oGridDef.rows);
+		this.setCols(oGridDef.cols);
+		this.setSpaces(oGridDef.spacing); // px
+
+		this._a_cells = new Array();
+		Cell.refreshDOM();
+		for(nCnt_c = 0; nCnt_c <= ((this._cols*this._rows)-1); nCnt_c++){
+			//  Instance a new Cell object for each column within each row
+			var rCell = new Cell(oCellDef);
+			rCell.setMargin(this._spacing);
+			rCell.setFloat('left');
+			// Prevent Floating to the left of the first cell
+			if(nCnt_c % this._cols == 0) { rCell.setClear('left'); }
+			rCell.render();
+			this._a_cells[nCnt_c] = rCell;
+		}
+	}
+
+	Grid.prototype.randomize = function(){
+		//    Iterate the array of cells and randomize the color
+		for(nCnt = 0; nCnt <= (this._a_cells.length -1); nCnt++){
+			this._a_cells[nCnt].randomColor();
+		}
+	}
+
+	function Cell (oCellDef) {
+	    //  Cell - Insert into DOM a new Div element
+	    //  given color and dimensions.
+	    this._id = "cell_" + ++Cell._counter;
+	    //  Public Methods
+		this.setColor = function (hColor) {
+			this._color = "#" + ((typeof hColor === "undefined") ? "767676" : hColor);
+		};
+		this.setHeight = function (nHeight) {
+			this._height = (typeof nHeight === "undefined") ? 96 : nHeight + "px";
+		};
+		this.setWidth = function (nWidth) {
+			this._width = (typeof nWidth === "undefined") ? 96 : nWidth + "px";
+		};
+		this.setMargin = function (nMargin) {
+			this._margin = nMargin + "px";
+		};
+		this.getMargin = function () {
+			return this._margin.substring(0, this._margin.length - 2);
+		};
+		this.setFloat = function (sFloat) {
+			this._float = sFloat;
+		};
+		this.setClear = function (sClear) {
+			this._clear = sClear;
+		};
+		this.randomColor = function () {
+			//    Assign a random color value in hex to the property and the div style
+			this._color = "#" + (Math.random()*0xFFFFFF<<0).toString(16);
+			this._cellDv.style.background = this._color;
+		};
+		this.removeDOM = function (sId) {
+			var ele = document.getElementById(sId);
+			if (ele != null) ele.parentNode.removeChild(ele);
+		}
+		this.cellDv = function () {
+			return this._cellDv;
+		}
+		//  Assign Parameters
+		this.setColor(oCellDef.color);
+		this.setHeight(oCellDef.height);
+		this.setWidth(oCellDef.width);
+		//
+		this.setMargin(0);
+		this._float = "none";
+		this._clear = "none";
+	}
+
+	Cell.prototype.render = function() {
+		//    Create a Div and assign the styles
+		if (this._cellDv == null) {
+			this._cellDv = document.createElement("div");
+			//
+			if ("body" == Cell._target){
+				document.body.appendChild(this._cellDv);
+			}else{
+				document.getElementById(Cell._target).appendChild(this._cellDv);
+			}
+			this._cellDv.id = this._id;
+			//this._cellDv.innerHTML = this._id;    //    uncomment to debug
+		};
+		//  Persist onto DOM instance element style
+        this._cellDv.style.background = this._color;
+        this._cellDv.style.height = this._height;
+        this._cellDv.style.width = this._width;
+      	this._cellDv.style.marginTop = this._margin;
+      	this._cellDv.style.marginRight = this._margin
+      	this._cellDv.style.cssFloat = this._float;
+		this._cellDv.style.clear = this._clear;
+	};
+
+	Cell.refreshDOM = function() {
+		//  Refresh containing element
+		var ele = document.getElementById("cell_" + Cell._counter);
+		if (ele != null) ele.parentNode.innerHTML = '';
+		Cell._counter = 0;
+	}
+
+	Cell.setTarget = function(sTargetId) {
+		//  Element that will contain the Cell div
+		Cell._target = sTargetId;
+	}
+	Cell._counter = 0;
+	Cell._target = 'body';
+
+	function ResizableGrid (oGridDef) {
+		//  ResizableGrid - Extends Grid allowing for
+		//  drag and drop resizing
+		Grid.call(this, oGridDef);
+	}
+	ResizableGrid.prototype = Object.create(Grid.prototype);
+	ResizableGrid.prototype.constructor = ResizableGrid;
+
+	ResizableGrid.prototype.allowresize = function() {
+		//  Setup the Drag and drop logic
+		oCell = this._a_cells[(this._a_cells.length -1)];
+		oCellDv = oCell.cellDv();
+		oCellDv.style.border = "thin solid #FF0000";
+		oCellDv.style.cursor = "move";
+
+		ResizableGrid.x_cell_org = oCellDv.offsetLeft;
+		ResizableGrid.y_cell_org = oCellDv.offsetTop - oCell.getMargin();
+		ResizableGrid.y_mouse_org = window.event.clientY;
+		oCellDv.style.position = "absolute";
+		oCellDv.style.left = ResizableGrid.x_cell_org + 'px';
+		oCellDv.style.top = ResizableGrid.y_cell_org + 'px';
+
+		oCellDv.onmousedown = function () {
+		    ResizableGrid.start_cell_drag(this);
+		    return false;
+		};
+		document.addEventListener("mouseup", this.stop_cell_drag);
+	};
+
+	ResizableGrid.prototype.stop_cell_drag = function() {
+		//  End drag and drop operation
+		//  Fires onmouseup
+		if(ResizableGrid.selCell != null) {
+
+			ResizableGrid.selCell = null;
+			document.removeEventListener("mouseup");
+			var nCols = 6;
+			var nWidth = 16 + 8;
+			var nRows = 6;
+			var nLength = 16 + 8;
+			if(ResizableGrid.x_cell_org <= ResizableGrid.x_mouse){
+				nCols = nCols + (Math.round((ResizableGrid.x_mouse - ResizableGrid.x_cell_org) / nWidth));
+			}else{
+				if(ResizableGrid.x_cell_org >= ResizableGrid.x_mouse){
+					nCols = nCols - (Math.round((ResizableGrid.x_cell_org - ResizableGrid.x_mouse) / nWidth));
+				};
+			};
+			if(ResizableGrid.y_mouse_org <= ResizableGrid.y_mouse){
+				nRows = nRows + (Math.round((ResizableGrid.y_mouse - ResizableGrid.y_mouse_org) / nLength));
+			}else{
+				if(ResizableGrid.y_mouse_org >= ResizableGrid.y_mouse){
+					nRows = nRows - (Math.round((ResizableGrid.y_mouse_org - ResizableGrid.y_mouse) / nLength));
+				};
+			};
+			force_resize({color:'EDBA08', height:16, width:16}, {rows:nRows, cols:nCols, spacing:8});
+		}
+	};
+
+	ResizableGrid.selCell = null;
+	ResizableGrid.x_cell_org = 0;
+	ResizableGrid.y_cell_org = 0;
+	ResizableGrid.x_cell = 0;
+	ResizableGrid.y_cell = 0;
+	ResizableGrid.x_mouse = 0;
+	ResizableGrid.y_mouse = 0;
+	ResizableGrid.y_mouse_org = 0;
+
+	ResizableGrid.start_cell_drag = function(ele) {
+		//  Fires on mousedown
+		ResizableGrid.selCell = ele;
+		ResizableGrid.x_cell = ResizableGrid.x_mouse - ResizableGrid.selCell.offsetLeft;
+		ResizableGrid.y_cell = ResizableGrid.y_mouse - ResizableGrid.selCell.offsetTop;
+	};
+
+	ResizableGrid.move_cell_drag = function() {
+		//  Abs position element on mouse x y
+	    ResizableGrid.x_mouse = window.event.clientX;
+	    ResizableGrid.y_mouse = window.event.clientY;
+	    if (ResizableGrid.selCell !== null) {
+	        ResizableGrid.selCell.style.left = (ResizableGrid.x_mouse - ResizableGrid.x_cell) + 'px';
+	        ResizableGrid.selCell.style.top = (ResizableGrid.y_mouse - ResizableGrid.y_cell) + 'px';
+	    }
+	};
+
+	function force_resize(oCellDef, oGridDef) {
+		Cell.setTarget('c3_container');
+		resizablegrid = new Grid(oGridDef);
+		resizablegrid.resize(oCellDef, oGridDef);
+	}
+
+document.onmousemove = ResizableGrid.move_cell_drag;
+</script>
+</body>
+</html>
