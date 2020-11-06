@@ -65,7 +65,7 @@ method="post" action="">
     /* --------------------
      Add your code here
     --------------------- */
-let DoValid = (function( _d, qForm ){
+let DoValid = ( ( _d, qForm )=>{
   const eForm = _d.querySelectorAll( qForm )[0];
   const aInputs = [].slice.call( _d.querySelectorAll( qForm + " INPUT" ) );
   const mInputs = new Map();
