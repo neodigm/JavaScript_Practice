@@ -74,10 +74,10 @@ let DoValid = ( ( _d, qForm )=>{
   _d.querySelectorAll("#js-subm")[0].addEventListener("click", function( e ){
     isValid = checkValues();
 
-    if( isValid ){  //  Check email contains AT
+    if( isValid ){  //  Check email contains AT Character
       isValid = ( _d.querySelectorAll("#js-pw")[0].value === _d.querySelectorAll("#js-pw1")[0].value  );
     }
-    alert( (isValid) ? "OK TO SUBMIT" : "FORM IS NOT VALID" );
+    alert( (isValid) ? "OK TO SUBMIT" : "FORM IS NOT VALID" ); // Toast or CTA miro-copy
   });
   checkValues = function(){
       return  (aInputs.filter(function( e ){ return ( e.value ) }).length === 5 );
