@@ -4,7 +4,7 @@ Musings in the expressive language that is JavaScript
 
 🗿Update Flux Capacitor (WebAssembly 🐹 GoLang)🪐
 
-(JavaScript Practice)[https://neodigm.github.io/JavaScript_Practice/]
+[JavaScript Practice](https://neodigm.github.io/JavaScript_Practice/)
 ---
 #
 [Portfolio Blog](https://www.theScottKrause.com) |
