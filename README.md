@@ -17,7 +17,8 @@ Musings in the expressive language that is JavaScript
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvt.svg" width="33" alt="Vivid Vector Skulduggery">
 <br>
 </p>
-
+</details>
+    
 🗿Update Flux Capacitor (WebAssembly 🐹 GoLang)🪐
 
 [JavaScript Practice](https://neodigm.github.io/JavaScript_Practice/)
