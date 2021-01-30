@@ -2,6 +2,22 @@
 ---
 Musings in the expressive language that is JavaScript
 
+<details>
+    <summary>ECMAScript</summary>
+<p align="center">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvj.svg" width="33" alt="Renaissance Man Weaponeered Poetry">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vva.svg" width="33" alt="Clockwork Clever Tricknology">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvv.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vva.svg" width="33" alt="Vivid Vector indelible">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvs.svg" width="33" alt="bloom with the fragrance of mischief">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvc.svg" width="33" alt="👁️D3 Parallax Three.js Greensock && WebGL 🍭">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvr.svg" width="33" alt="🦄 AWS Amplify && GraphQL && TypeScript && Go  🍰">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvi.svg" width="33" alt="bloom with the fragrance of mischief">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvp.svg" width="33" alt="👁️D3 Parallax Three.js Greensock && WebGL 🍭">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvt.svg" width="33" alt="Vivid Vector Skulduggery">
+<br>
+</p>
+
 🗿Update Flux Capacitor (WebAssembly 🐹 GoLang)🪐
 
 [JavaScript Practice](https://neodigm.github.io/JavaScript_Practice/)
