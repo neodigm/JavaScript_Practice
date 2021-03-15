@@ -1,6 +1,5 @@
-
----
-Musings in the expressive language that is JavaScript
+Musings in the expressive language that is JavaScript 
+console.log( "What is this!?" );
 
 <details>
     <summary>ECMAScript</summary>
