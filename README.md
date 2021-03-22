@@ -1,4 +1,4 @@
-Musings in the expressive language that is JavaScript
+Musings in the expressive language that is [JavaScript](https://thescottkrause.com/tags/javascript/)
 
 console.log( "What is this!?" );
 
