@@ -1,4 +1,4 @@
-Musings in the expressive language that is [JavaScript](https://thescottkrause.com/tags/javascript/)
+Musings in the expressive language that is [JavaScript](https://www.thescottkrause.com/tags/javascript/) Tricknology
 
 console.log( "What is this!?" );
 
