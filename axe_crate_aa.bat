@@ -1,2 +1,2 @@
-echo Arcanus five five
+echo five five
 axe https://www.crateandbarrel.com/ --load-delay=4000 --tags wcag2a
