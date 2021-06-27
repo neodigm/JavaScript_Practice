@@ -27,6 +27,11 @@ console.log( "What is this!?" ); // 🚀 JavaScript && TypeScript && Go 🪐
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvp.svg" width="33" alt="👁️D3 Parallax Three.js Greensock && WebGL 🍭">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvt.svg" width="33" alt="Vivid Vector Creative ⚡ Business ⚡ Technical Agility">
 </p>
+<p align="center">
+    <a target="_blank" href="https://neodigm.github.io/pan-fried-monkey-fisticuffs/viz_components/viz_linear_percent_v2.html">
+Viz Linear Percent Component
+    </a>
+</p>
 </details>
     
 
