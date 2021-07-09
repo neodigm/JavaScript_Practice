@@ -1,6 +1,5 @@
 Musings in the expressive language that is [JavaScript](https://www.thescottkrause.com/tags/javascript/) Tricknology
 
-console.log( "What is this!?" ); // 🚀 JavaScript && TypeScript && Go 🪐
 
 <details>
     <summary>ECMAScript</summary>
