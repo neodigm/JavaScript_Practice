@@ -62,6 +62,7 @@ Viz Linear Percent Component
   </a>
 </p>
 
+
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/neodigm/vivid_vector_alphabet)
 
 <p align="center">
