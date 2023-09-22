@@ -17,7 +17,7 @@ Musings in the expressive language that is [JavaScript](https://www.thescottkrau
 <br>
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvt.svg" width="33" alt="Renaissance Man Weaponeered Poetry">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvy.svg" width="33" alt="Clockwork Clever Tricknology">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvp.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvp.svg" width="33" alt="DataVis 👁️ UX 🍭 PWA 👁️ ThreeJS ✨ Vue  🚀 Svelte 🌶️ htmlx">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vve.svg" width="33" alt="Vivid Vector indelible">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvs.svg" width="33" alt="bloom with the fragrance of mischief">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvc.svg" width="33" alt="👁️D3 Parallax Three.js Greensock && WebGL 🍭">
