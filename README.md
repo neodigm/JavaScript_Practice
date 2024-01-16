@@ -27,7 +27,8 @@ Musings in the expressive language that is [JavaScript](https://www.thescottkrau
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvt.svg" width="33" alt="Vivid Vector Creative ⚡ Business ⚡ Technical Agility">
 </p>
 <p align="center">
-    <a target="_blank" href="https://neodigm.github.io/pan-fried-monkey-fisticuffs/viz_components/viz_linear_percent_v2.html">
+    <a target="_blank" href="https://neodigm.github.io/pan-fried-monkey-fisticuffs/viz_components/viz_linear_percent_v2.html"
+	alt="Infographics UX PWA SolidJS ThreeJS Vue ✨ HTMX">
 Viz Linear Percent Component
     </a>
 </p>
