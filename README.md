@@ -4,7 +4,7 @@ Musings in the expressive language that is [JavaScript](https://www.thescottkrau
 <details>
     <summary>ECMAScript</summary>
 <p align="center">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvj.svg" width="33" alt="Renaissance Man Weaponeered Poetry">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvj.svg" width="33" alt="Renaissance Man Weaponeered Poetry Infographics UX PWA SolidJS ThreeJS Vue ✨ HTMX">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vva.svg" width="33" alt="Clockwork Clever Tricknology">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvv.svg" width="33" alt="Vivid Vector Skulduggery">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vva.svg" width="33" alt="Vivid Vector indelible">
