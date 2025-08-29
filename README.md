@@ -24,7 +24,7 @@ Musings in the expressive language that is [JavaScript](https://www.thescottkrau
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvr.svg" width="33" alt="🦄 AWS Amplify && GraphQL && TypeScript && Go  🍰">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvi.svg" width="33" alt="bloom with the fragrance of mischief">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvp.svg" width="33" alt="👁️D3 Parallax Three.js Greensock && WebGL 🍭">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvt.svg" width="33" alt="Vivid Vector Creative ⚡ Business ⚡ Technical Agility">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvt.svg" width="33" alt="Vivid Vector Creative ⚡ Business ⚡ Technical Agility AI Agents Chat UX PWA SolidJS Lit ThreeJS Vue ✨HTMX Rust WASM">
 </p>
 <p align="center">
     <a target="_blank" href="https://neodigm.github.io/pan-fried-monkey-fisticuffs/viz_components/viz_linear_percent_v2.html"
