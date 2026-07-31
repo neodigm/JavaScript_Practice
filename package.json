@@ -1,7 +1,7 @@
 {
   "name": "scott_c_krause_neodigm_ux",
   "version": "5.5.1",
-  "description": "UX artisan ⚡ illustrator ⚡ front-end engineer",
+  "description": "UX artisan ⚡ illustrator ⚡ front-end engineer MCP AI Agents Chat UX PWA 3D ThreeJS Vue ✨ HTMX Rust WASM",
   "main": "vue_threejs_wasm.js",
   "scripts": {
     "test": "e2e.js"
